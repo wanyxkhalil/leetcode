@@ -22,7 +22,7 @@ func spiralOrder(matrix [][]int) []int {
 	visit, m, n, round, x, y, spDir := make([][]int, len(matrix)),
 		len(matrix), len(matrix[0]), 0, 0, 0, [][]int{
 			[]int{0, 1},
-			[]int{1, 1},
+			[]int{1, 0},
 			[]int{0, -1},
 			[]int{-1, 0},
 		}
@@ -64,7 +64,7 @@ func spiralOrder(matrix [][]int) []int {
 				continue
 			}
 		case 3:
-			if y-1 >= 0 && visit[x-1][y] == 1 {
+			if x-1 >= 0 && visit[x-1][y] == 1 {
 				round++
 				continue
 			}
