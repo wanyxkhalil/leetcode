@@ -9,8 +9,8 @@ require (
 	github.com/robfig/go-cache v0.0.0-20130306151617-9fc39e0dbf62
 	golang.org/x/mod v0.4.2 // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
-	golang.org/x/sys v0.0.0-20210316164454-77fc1eacc6aa // indirect
-	golang.org/x/tools/gopls v0.6.7 // indirect
+	golang.org/x/sys v0.0.0-20210317225723-c4fcb01b228e // indirect
+	golang.org/x/tools/gopls v0.6.8 // indirect
 	honnef.co/go/tools v0.1.3 // indirect
 	mvdan.cc/gofumpt v0.1.1 // indirect
 )
