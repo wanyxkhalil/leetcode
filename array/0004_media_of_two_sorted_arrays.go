@@ -1,12 +1,5 @@
 package array
 
-import (
-	"fmt"
-	"time"
-
-	"github.com/robfig/go-cache"
-)
-
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	if len(nums1) > len(nums2) {
 		return findMedianSortedArrays(nums2, nums1)
@@ -30,7 +23,7 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	} else if nums2Mid == 0 {
 		midLeft = nums1[nums1Mid-1]
 	} else {
-		midLeft = Max(nums1[nums1Mid-1], nums2[nums2Mid-1])
+		midLeft = max004(nums1[nums1Mid-1], nums2[nums2Mid-1])
 	}
 	if (len(nums1)+len(nums2))&1 == 1 {
 		return float64(midLeft)
@@ -40,19 +33,19 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	} else if nums2Mid == len(nums2) {
 		midRight = nums1[nums1Mid]
 	} else {
-		midRight = Min(nums1[nums1Mid], nums2[nums2Mid])
+		midRight = min004(nums1[nums1Mid], nums2[nums2Mid])
 	}
 	return float64(midLeft+midRight) / 2
 }
 
-func Max(x, y int) int {
+func max004(x, y int) int {
 	if x > y {
 		return x
 	}
 	return y
 }
 
-func Min(x, y int) int {
+func min004(x, y int) int {
 	if x < y {
 		return x
 	}

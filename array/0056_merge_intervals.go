@@ -1,5 +1,6 @@
 package array
 
+// Interval is type
 type Interval struct {
 	Start int
 	End   int
